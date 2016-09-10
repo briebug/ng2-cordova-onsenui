@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Ng2CordovaOnsenui</title>
+  <title>Angular2 Cordova Onsenui</title>
   <base href="/">
 
   {{#unless environment.production}}
@@ -13,7 +13,7 @@
 </head>
 <body>
   <app-root>Loading...</app-root>
-  
+
     {{#each scripts.polyfills}}
     <script src="{{.}}"></script>
     {{/each}}
@@ -22,6 +22,10 @@
         System.import('main');
       }).catch(console.error.bind(console));
     </script>
-  
+
+
+  {{#if environment.mobile}}
+  <script type="text/javascript" src="cordova.js"></script>
+  {{/if}}
 </body>
 </html>
