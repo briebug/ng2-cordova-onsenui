@@ -1,20 +1,21 @@
 /* tslint:disable:no-unused-variable */
-
-import { addProviders, async, inject } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import {async, inject, TestBed} from '@angular/core/testing';
+import {AppComponent} from './app.component';
 
 describe('App: Ng2CordovaOnsenui', () => {
-  beforeEach(() => {
-    addProviders([AppComponent]);
-  });
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            declarations: [AppComponent]
+        });
+    });
 
-  it('should create the app',
-    inject([AppComponent], (app: AppComponent) => {
-      expect(app).toBeTruthy();
-    }));
+    it('should create the app',
+        inject([AppComponent], (app: AppComponent) => {
+            expect(app).toBeTruthy();
+        }));
 
-  it('should have as title \'app works!\'',
-    inject([AppComponent], (app: AppComponent) => {
-      expect(app.title).toEqual('app works!');
-    }));
+    it('should have as title \'app works!\'',
+        inject([AppComponent], (app: AppComponent) => {
+            expect(app.title).toEqual('app works!');
+        }));
 });

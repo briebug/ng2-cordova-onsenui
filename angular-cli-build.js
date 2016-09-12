@@ -15,7 +15,9 @@ module.exports = function(defaults) {
       'es6-shim/es6-shim.js',
       'reflect-metadata/**/*.+(ts|js|js.map)',
       'rxjs/**/*.+(js|js.map)',
-      '@angular/**/*.+(js|js.map)'
+      '@angular/**/*.+(js|js.map)',
+      'onsenui/**/*.+(js|js.map|css|ttf|woff)',
+      'angular2-onsenui/dist/**/*.+(js|js.map)'
     ]
   });
 };
